@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
   db:
-    container_name: db1
+    container_name: db
     image: postgres:12
     environment:
       - POSTGRES_USER=postgres
