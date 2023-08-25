@@ -2,10 +2,10 @@ version: '3.9'
 
 services:
   djangoapp:
-    container_name: djangoapp1
+    container_name: djangoapp
     build: .
     ports:
-      - "8001:8001"
+      - "8000:8000"
     environment:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
@@ -22,7 +22,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
     ports:
-      - "5431:5431"
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
