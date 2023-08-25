@@ -12,7 +12,7 @@ COPY . .
 
 RUN chmod +x /app/django.sh
 
-EXPOSE 8000
+EXPOSE 8001
 
 ENTRYPOINT ["/app/django.sh"]
 
