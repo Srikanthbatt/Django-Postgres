@@ -4,7 +4,7 @@ python3 manage.py makemigrations djangoapp
 echo "=================================="
 
 echo "Migrate"
-python manage.py migrate
+python3 manage.py migrate
 echo "=================================="
 
 echo "Create Superuser"
@@ -15,4 +15,4 @@ python manage.py createsuperuser --noinput
 echo "=================================="
 
 echo "Start server"
-python manage.py runserver 0.0.0.0:8000
+python3 manage.py runserver 0.0.0.0:8000
