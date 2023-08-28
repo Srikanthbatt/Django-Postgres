@@ -9,7 +9,7 @@ echo "=================================="
 
 echo "Create Superuser"
 DJANGO_SUPERUSER_USERNAME="admin" \
-DJANGO_SUPERUSER_PASSWORD="admin" \
+DJANGO_SUPERUSER_PASSWORD="" \
 DJANGO_SUPERUSER_EMAIL="email@kanis.hk" \
 python manage.py createsuperuser --noinput
 echo "=================================="
