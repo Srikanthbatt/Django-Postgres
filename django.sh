@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Create migrations"
-python3 manage.py makemigrations djangoapp
+python manage.py makemigrations djangoapp
 echo "=================================="
 
 echo "Migrate"
-python3 manage.py migrate
+python manage.py migrate
 echo "=================================="
 
 echo "Create Superuser"
@@ -15,4 +15,4 @@ python manage.py createsuperuser --noinput
 echo "=================================="
 
 echo "Start server"
-python3 manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
