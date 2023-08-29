@@ -4,15 +4,19 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Install virtualenv and create a virtual environment
+RUN pip install virtualenv
+RUN virtualenv venv
 
+# Activate the virtual environment
+RUN . venv/bin/activate
+
+# Install required packages
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN chmod +x /app/django.sh
-
 EXPOSE 8000
 
-ENTRYPOINT ["/app/django.sh"]
-
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "your_project_name.wsgi:application"]
