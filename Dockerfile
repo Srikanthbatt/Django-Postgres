@@ -15,6 +15,9 @@ RUN pip install -r requirements.txt
 # Copy the rest of the application files
 COPY . .
 
+#Set executable permissions for django.sh
+Run chmod +x django.sh
+
 EXPOSE 8000
 
 CMD ["venv/bin/python", "manage.py", "runserver", "0.0.0.0:8000"]
