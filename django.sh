@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Create migrations"
-/usr/local/bin/python manage.py makemigrations djangoapp
+python3 manage.py makemigrations djangoapp
 echo "=================================="
 
 echo "Migrate"
