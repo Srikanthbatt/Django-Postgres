@@ -8,8 +8,8 @@ python3 manage.py migrate
 echo "=================================="
 
 echo "Create Superuser"
-DJANGO_SUPERUSER_USERNAME="admin" \
-DJANGO_SUPERUSER_PASSWORD="admin" \
+DJANGO_SUPERUSER_USERNAME=${user_name}
+DJANGO_SUPERUSER_PASSWORD=${user_password}
 DJANGO_SUPERUSER_EMAIL="email@kanis.hk" \
 python3 manage.py createsuperuser --noinput
 echo "=================================="
